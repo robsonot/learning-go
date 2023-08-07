@@ -80,7 +80,6 @@ func main() {
 
 	// Serving static files
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir("./static/")))
-
 	fmt.Println("Serving requests on port 8080")
 	err := http.ListenAndServe(":8080", router)
 	log.Fatal(err)
